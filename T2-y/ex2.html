@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    A: <input id="txt1" type="text" value="Enter A:"  onfocus="clearA()"/>
+    B: <input id="txt2" type="text" value="Enter B:" onfocus="clearB()"/>
+    <button onclick="calculate()">Calculate</button>
+    <label id="lbl">place for result</label>
+<hr/>
+			<select id="mySelect" onchange="getOptionAndIndex()">
+                <option>+</option>
+                <option>-</option>
+                <option>*</option>
+                <option>/</option>
+            </select>
+			
+			
+    <!--Js code-->
+    <script>
+        let a, b;
+        function calculate() {
+            a = Number(document.getElementById('txt1').value);
+            if (isNaN(a)) {
+                alert("Numbers only for A: !!!!!");
+            }
+            b = Number(document.getElementById('txt2').value);
+            if (isNaN(b)) {
+                window.alert("Numbers only for B: !!!!!");
+            }
+            sum(a, b);
+
+        }
+
+
+        function sum(x, y) {
+            let z = x + y;
+            //console.log(z);
+            document.getElementById('lbl').innerText = z;
+        }
+
+
+        function clearA() {
+            let xx = document.getElementById('txt1');
+            xx.value = "";
+            xx.style.background = "yellow";
+
+        }
+
+        function clearB() {
+            let xx = document.getElementById('txt2');
+            xx.value = null;
+            xx.style.background = "yellow";
+
+        }
+
+       // sum(10, 20);
+    </script>
+
+</body>
+</html>

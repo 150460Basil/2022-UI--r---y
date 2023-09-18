@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <input id='btn1' type="button" value="OK"/>
+
+    <input id="btn2" type="submit" name="subject" value="HTML-5" />
+
+    <script>
+        function myF1(){
+            document.getElementById('btn1').disabled = true;            
+        }
+        //myF1();
+
+        function myF2(){
+            let btn = document.getElementById('btn1');
+            let y= btn.type;
+            let z = btn.value;
+
+            // let x = document.getElementById('btn1').type;
+            // let y = document.getElementById('btn1').value;
+            console.log(y);
+            console.log(z);
+            document.getElementById('demo').innerHTML = x+"*****"+y;
+            document.getElementById('btn1').value = "Clear data";
+        }
+       // myF2();
+
+       function myF3(){
+            const elem = document.getElementById("btn2");
+            
+            const attrs = elem.attributes;
+            
+            const n = attrs.length;
+            let text = '';
+
+            for (i = 0; i < n; i++) {
+                text = text + attrs[i].name + ">>>>>>" + attrs[i].value + '</br>' ;
+                document.getElementById('demo').innerHTML = text;
+            }
+        }
+
+        myF3();
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

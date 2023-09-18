@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Task 2 - T2</title>
+</head>
+<body>
+    A: <input id="txt1" type="text" value="Enter A:" onfocus="this.style.background='yellow'" />
+    B: <input id="txt2" type="text" value="Enter B:" onfocus="clearB()" />
+    <input type="button" value="Calculate" onclick="Calculate()" />
+    <label id="lbl">place for result</label>
+
+    <select id="mySelect" onchange="Calculate()">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+    </select>
+
+    <!--JS code next-->
+    <script>
+        let a, b;
+
+        function Calculate() {
+            a = Number(document.getElementById('txt1').value);
+            if (isNaN(a)) {
+                window.alert("Enter numbers only for A:");
+            }
+
+            b = Number(document.getElementById('txt2').value);
+            if (isNaN(b)) {
+                window.alert("Enter numbers only for B:");
+            }
+
+            sum(a, b);
+        }
+
+
+        function sum(x, y) {
+            let z = x + y;
+            //console.log(z);
+            document.getElementById('lbl').innerHTML = z;
+        }
+
+        //sum(10, 20);
+
+        function clearA() {
+            let x = document.getElementById('txt1');
+            x.value = "";
+            //x.style.background = 'yellow';
+        }
+
+        function clearB() {
+            let x = document.getElementById('txt2');
+            x.value = null;
+            x.style.background = 'yellow';
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>

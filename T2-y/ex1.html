@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>T2-y</title>
+</head>
+<body>
+    <h1 id="hh1">Welcome in Unibit</h1>
+    <p id="pp1">Hello students</p>
+    <button onclick="fistFunction()">Fisrst Function</button>
+    <hr />
+
+    <button id="btn2" onclick="back()">Back</button>
+    <img id="pic" src="car1.jpg" width="400" />
+    <button id="btn1" onclick="change()">Change</button>
+    <input type="button" value="OneBTNClick" onclick="oneBtn()"/>
+    
+
+    
+
+
+<!--JS Code next-->
+    <script>
+        myFunction();
+        function myFunction() {document.getElementById('hh1').innerHTML='jjj'+ 10 * 100;}
+        // //xxx = myFunction(5);
+        // console.log(xxx)
+
+
+
+        
+        let x, y;
+        let b = true;
+        function fistFunction() {
+            x = document.getElementById('hh1').innerHTML;
+            y = document.querySelector("#pp1").innerHTML;
+
+            document.getElementById('hh1').innerHTML = y;
+            document.getElementById('pp1').innerHTML = x;
+            
+        }
+
+        function change() {
+            document.getElementById('pic').src = "car2.jpg";
+            document.getElementById('btn1').style = "display:none";
+            document.getElementById('btn2').style = "display:inline";
+        }
+
+        function back() {
+            let z = document.getElementById('pic');
+            z.src = "car1.jpg";
+            console.log(typeof z);
+
+            document.getElementById('btn1').style = "display:inline";
+            document.getElementById('btn2').style = "display:none";
+        }
+
+        
+        function oneBtn() {
+            if (b) {
+                document.getElementById('pic').src = "car2.jpg";
+                //b = !b;
+            } else {
+                document.getElementById('pic').src = "car1.jpg";
+                //b = !b;
+            }
+            b = !b;
+
+        }
+
+        
+
+
+    </script>
+
+    
+
+</body>
+</html>

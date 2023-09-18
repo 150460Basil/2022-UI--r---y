@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="pic" src="/pictures/car1.jpg" width="400"/>
+    <input type="button" value="1" onclick="slideShow(1)" />
+    <input type="button" value="2" onclick="slideShow(2)"/>
+    <input type="button" value="3" onclick="slideShow(3)"/>
+    <input type="button" value="4" onclick="slideShow(4)"/>
+    <input type="button" value="5" onclick="slideShow(5)"/>
+
+    <script>
+        let x = 0;
+        function slideShow(x){
+        switch(x){
+            case 1:
+                document.getElementById('pic').src = "/pictures/car1.jpg";
+                break;
+            case 2:
+                document.getElementById('pic').src= "/pictures/car2.jpg";
+                break;
+            case 3:
+            document.getElementById('pic').src = "/pictures/car3.png";
+                break;
+            case 4:
+                document.getElementById('pic').src= "/pictures/car1.jpg";
+                break;
+            case 5:
+                document.getElementById('pic').src = "/pictures/car2.jpg";
+                break;
+        }
+    }
+
+
+
+    </script>
+</body>
+</html>

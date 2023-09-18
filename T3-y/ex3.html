@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="demo"></h1>
+    <input id="btn1" type="button" value="OK"/>
+
+    <input id="btn2" type="submit" name="subject" value="HTML-5" />
+
+    <script>
+
+        function disAble(){
+            document.getElementById("btn1").disabled = true;
+        }
+        //disAble();
+
+        function myF(){
+            let x = document.getElementById("btn1").type;
+            let y = document.getElementById("btn1").value;
+            console.log(x);
+            console.log(y);
+            document.getElementById('demo').innerHTML = '***'+x+"***"+y+'***';
+            document.getElementById("btn1").value = "Clear Data";
+        }
+        //myF();
+
+        function myF2(){
+            var elem = document.getElementById("btn2");
+            var attrs = elem.attributes;
+            var n = attrs.length;
+            var text = '';
+
+            for (i = 0; i < n; i++) {
+                text = text + attrs[i].name + ">>>>>>" + attrs[i].value + '</br>' ;
+                document.getElementById('demo').innerHTML = text;
+            }
+        }
+
+        myF2();
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
